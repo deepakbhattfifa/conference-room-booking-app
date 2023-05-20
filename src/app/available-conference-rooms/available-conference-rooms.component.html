@@ -1,0 +1,11 @@
+<div>
+  <form name="myForm">
+    <label for="repeatSelect"> Repeat select: </label>
+    <select name="repeatSelect" id="repeatSelect" [(ngModel)]="selectedRoom">
+      <option *ngFor="let room of availableRooms" value="{{room.roomNo}}">{{room.roomName}}</option>
+    </select>
+  </form>
+  <hr>
+  <input type="submit" value="Submit"/>
+  <p>selected room no  = {{selectedRoom}}</p><br/>
+</div>
